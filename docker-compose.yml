@@ -1,9 +1,30 @@
-services:
-  pavlovserver:
+services:  
+  dust216:
     build: .
+    environment:
+      PV_PORT: 7777
     ports:
       - "7777:7777/udp"
-      - "8177:8177/udp"
     volumes:
-      - ./PavlovServerConfig_cs16.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+      - ./dust216.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+    restart: unless-stopped
+  
+  dust2csgo:
+    build: .
+    environment:
+      PV_PORT: 7778
+    ports:
+      - "7778:7778/udp"
+    volumes:
+      - ./dust2csgo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+    restart: unless-stopped
+  
+  dust216night:
+    build: .
+    environment:
+      PV_PORT: 7779
+    ports:
+      - "7779:7779/udp"
+    volumes:
+      - ./dust216night.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
     restart: unless-stopped

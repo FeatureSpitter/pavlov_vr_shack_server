@@ -35,5 +35,5 @@ RUN chmod +x ./PavlovServer.sh
 EXPOSE 7777/udp
 EXPOSE 8177/udp
 
-CMD ["./PavlovServer.sh"]
+CMD ["./PavlovServer.sh -PORT=$PV_PORT"]
 
