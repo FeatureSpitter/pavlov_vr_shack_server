@@ -1,0 +1,12 @@
+services:
+  pavlovserver:
+    build: .
+    ports:
+      - "7777:7777/udp"
+      - "8177:8177/udp"
+    volumes:
+      #- ./custom_maps:/home/steam/pavlovserver/Pavlov/Saved/maps
+      #- ./custom_skins:/home/steam/pavlovserver/Pavlov/Saved/skins
+      #- ./custom_mods:/home/steam/pavlovserver/Pavlov/Saved/mods
+      - ./PavlovServerConfig_cs16.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+    restart: unless-stopped
