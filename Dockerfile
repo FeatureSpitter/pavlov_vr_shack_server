@@ -17,7 +17,8 @@ WORKDIR /home/steam/Steam
 
 RUN curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
 
-RUN ./steamcmd.sh +force_install_dir /home/steam/pavlovserver +login anonymous +app_update 622970 -beta shack_beta validate +exit
+# https://steamdb.info/app/622970/depots/
+RUN ./steamcmd.sh +force_install_dir /home/steam/pavlovserver +login anonymous +app_update 622970 shack validate +exit
 
 RUN ~/Steam/steamcmd.sh +login anonymous +app_update 1007 +quit \
     && mkdir -p ~/.steam/sdk64 \
