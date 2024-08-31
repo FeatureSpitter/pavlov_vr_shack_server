@@ -1,0 +1,2 @@
+Password=6969
+Port=9100
