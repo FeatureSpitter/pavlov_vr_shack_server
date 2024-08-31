@@ -20,7 +20,9 @@ It is quick, and easy to launch, saves you time in most cases, and avoids pollut
 
 ---------
 
-Read the following parts to learn more about customizing the server.
+Read the remainder of this README if you are having issues or if you want to learn more about customizing the server.
+
+---------
 
 ### Docker Setup
 
