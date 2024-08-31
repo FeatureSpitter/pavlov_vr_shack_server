@@ -10,6 +10,8 @@ services:
     volumes:
       - ./dust216.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini:ro
       - ./RconSettings_1.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt:ro
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=1
     restart: unless-stopped
   
   dust2csgo:
@@ -23,5 +25,7 @@ services:
     volumes:
       - ./dust2csgo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini:ro
       - ./RconSettings_2.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt:ro
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=1
     restart: unless-stopped
   
