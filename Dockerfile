@@ -25,7 +25,7 @@ RUN ~/Steam/steamcmd.sh +login anonymous +app_update 1007 +quit \
     && cp ~/Steam/steamapps/common/Steamworks\ SDK\ Redist/linux64/steamclient.so ~/pavlovserver/Pavlov/Binaries/Linux/steamclient.so \
     && mkdir -p /home/steam/pavlovserver/Pavlov/Saved/Logs \
     && mkdir -p /home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer \
-    && mkdir -p /home/steam/pavlovserver/Pavlov/Saved/maps
+    && mkdir -p /home/steam/pavlovserver/Pavlov/Saved/maps \
     && mkdir -p /home/steam/pavlovserver/Pavlov/Saved/Mods
 
 WORKDIR /home/steam/pavlovserver
