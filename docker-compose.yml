@@ -5,7 +5,7 @@ services:
       PV_PORT: 7777
     ports:
       - "7777:7777"
-      - "8177:8177/udp"
+      - "8177:8177"
     volumes:
       - ./dust216.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
     restart: unless-stopped
@@ -16,7 +16,7 @@ services:
       PV_PORT: 7778
     ports:
       - "7778:7778"
-      - "8178:8178/udp"
+      - "8178:8178"
     volumes:
       - ./dust2csgo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
     restart: unless-stopped
