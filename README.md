@@ -10,7 +10,49 @@ It is quick, and easy to launch, saves you time in most cases, and avoids pollut
 
 ## I don't care, lets run it!
 
-To run this you need to have docker and docker compose obviously. Install `docker compose` and not `docker-compose`. Just follow the official setup instructions.
+### Docker Setup
+
+To run this you need to be running a **Linux machine**, having docker and docker compose obviously installed (I tested this with Debian's Bash CLI).
+
+Ideally you have a VPS exclusively for this, don't run this in any important servers you have, unless you know what you are doing!
+
+To install Docker just follow the [official setup instructions](https://docs.docker.com/engine/install/ubuntu/). Which at the time of this writing are basically the following (skip if you already have the **official** docker):
+
+Run the following command to uninstall all conflicting packages:
+
+```bash
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+```
+
+Set up Docker's `apt` repository.
+
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+```
+
+To install the latest version, run:
+
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+Don't skip the steps just above if you get errors when running `docker compose` instead of `docker-compose`. Use the official Docker setup you naughty dev!
+
+PS. You can use Windows, but you won't be able to use the `start.sh` and `stop.sh` scripts probably.
+
+### Firewall
 
 Then you need to either completely disable you server's firewall (or if you are hosting locally, expose your computer using DMZ).
 If you want to do it a safer way, then, for this setup I have where I am using ports: `7777, 8177, 7778, 8178, 9100 and 9101`:
@@ -19,8 +61,7 @@ If you want to do it a safer way, then, for this setup I have where I am using p
 2. Allow incoming ICMP requests
 3. Allow Any ICMP and outbound connection on any port and protocol
 4. Make sure your server has an IPv4 address, disable the IPv6 which is reported to cause issues with Pavlov VR as of version 1.0.19
-
-Then just run `sh start.sh` as root on your server (ideally you have a VPS exclusively for this, don't run this in other important servers you have unless you know what you are doing!).
+5. Then just run `sh start.sh` as root on your server.
 
 The servers should show up listed in [here](https://pavlovwiki.com/index.php/Setting_up_a_dedicated_server#Seeing_your_server_in_a_Master_List).
 
