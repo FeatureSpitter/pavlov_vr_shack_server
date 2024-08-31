@@ -1,6 +1,6 @@
 # This is just an out-of-the-box Pavlov VR server for Oculus Quest
 
-Actually it contains two, so that you know how to setup multiple servers using docker. RCON is enabled by default (check `RconSettings_*.txt`).
+Actually it contains two servers hehe, so that you know how to setup multiple servers using docker. RCON is enabled by default (check `RconSettings_*.txt`).
 
 One server launches the CS 1.6 de_dust2 map, the other the de_dust2 from CS:GO.
 
