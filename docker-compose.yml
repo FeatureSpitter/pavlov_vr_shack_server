@@ -6,6 +6,7 @@ services:
     ports:
       - "7777:7777"
       - "8177:8177"
+      - "9100:9100"
     volumes:
       - ./dust216.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini:ro
       - ./RconSettings_1.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt:ro
@@ -18,6 +19,7 @@ services:
     ports:
       - "7778:7778"
       - "8178:8178"
+      - "9101:9101"
     volumes:
       - ./dust2csgo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini:ro
       - ./RconSettings_2.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt:ro
