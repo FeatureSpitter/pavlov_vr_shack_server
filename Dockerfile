@@ -9,7 +9,6 @@ RUN apt-get install -y \
     && mkdir /home/steam/Steam \
     && chown steam:steam /home/steam/Steam
 
-
 RUN ln -sf /usr/lib/x86_64-linux-gnu/libc++.so.1 /usr/lib/x86_64-linux-gnu/libc++.so
 
 USER steam
