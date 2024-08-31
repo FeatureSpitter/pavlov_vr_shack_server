@@ -9,6 +9,7 @@ services:
       - "8177:8177" # Have no effect since network mode is host, but it is still good to keep this
       - "9100:9100" # Have no effect since network mode is host, but it is still good to keep this
     volumes:
+      - ./cache_dust216:/home/steam/pavlovserver/Pavlov/Saved
       - ./dust216.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini:ro
       - ./RconSettings_1.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt:ro
       - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt:ro
@@ -24,6 +25,7 @@ services:
       - "8178:8178" # Have no effect since network mode is host, but it is still good to keep this
       - "9101:9101" # Have no effect since network mode is host, but it is still good to keep this
     volumes:
+      - ./cache_dust2csgo:/home/steam/pavlovserver/Pavlov/Saved
       - ./dust2csgo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini:ro
       - ./RconSettings_2.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt:ro
       - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt:ro
