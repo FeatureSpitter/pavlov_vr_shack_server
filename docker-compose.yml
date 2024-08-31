@@ -21,13 +21,3 @@ services:
       - ./dust2csgo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
     restart: unless-stopped
   
-  dust216night:
-    build: .
-    environment:
-      PV_PORT: 7779
-    ports:
-      - "7779:7779"
-      - "8179:8179"
-    volumes:
-      - ./dust216night.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
-    restart: unless-stopped
