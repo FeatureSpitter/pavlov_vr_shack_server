@@ -6,13 +6,14 @@ One server launches the CS 1.6 de_dust2 map, the other the de_dust2 from CS:GO.
 
 ## Why use Docker?
 
-It is quick, and easy to launch, saves you time in most cases, and avoids polluting your VPS with the server's dependencies.
+It is quick, and easy to launch, saves you time in most cases, avoids polluting your VPS with the server's dependencies, and with this project you can easily have many Pavlov servers running within the same ~$20 VPS.
 
 ## I don't care, lets run it!
 
 **Summary**: If you are in a hurry and you already have Docker, this paragraph is all you need to read:
 
-1. Expose ports `7777, 8177, 7778, 8178, 9100 and 9101` in TCP and UDP.
+0. `git clone` this repo to anywhere in your server
+1. Expose ports `7777, 8177, 7778, 8178, 9100 and 9101` in TCP and UDP
 2. Enable ICMP
 3. Disable IPv6
 4. Run `start.sh`
