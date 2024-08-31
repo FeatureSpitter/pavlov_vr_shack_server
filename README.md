@@ -10,6 +10,18 @@ It is quick, and easy to launch, saves you time in most cases, and avoids pollut
 
 ## I don't care, lets run it!
 
+**Summary**: If you are in a hurry and you already have Docker, this paragraph is all you need to read:
+
+1. Expose ports `7777, 8177, 7778, 8178, 9100 and 9101` in TCP and UDP.
+2. Enable ICMP
+3. Disable IPv6
+4. Run `start.sh`
+5. Go play!
+
+---------
+
+Read the following parts to learn more about customizing the server.
+
 ### Docker Setup
 
 To run this you need to be running a **Linux machine**, having docker and docker compose obviously installed (I tested this with Debian's Bash CLI).
