@@ -3,6 +3,7 @@ services:
     build: .
     environment:
       PV_PORT: 7777
+    network_mode: host
     ports:
       - "7777:7777"
       - "8177:8177"
@@ -20,6 +21,7 @@ services:
     build: .
     environment:
       PV_PORT: 7778
+    network_mode: host
     ports:
       - "7778:7778"
       - "8178:8178"
