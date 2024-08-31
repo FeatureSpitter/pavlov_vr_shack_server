@@ -26,7 +26,7 @@ Read the remainder of this README if you are having issues or if you want to lea
 
 ### Docker Setup
 
-To run this you need to be running a **Linux machine**, having docker and docker compose obviously installed (I tested this with Debian's Bash CLI).
+To run this you need to be running a **Linux machine**, having docker and docker compose obviously installed (I tested this with Ubuntu 24.04's Bash CLI).
 
 Ideally you have a VPS exclusively for this, don't run this in any important servers you have, unless you know what you are doing!
 
@@ -104,3 +104,5 @@ If for some reason the map doesn't load right, and the server defaults to other 
 ### Don't forget!
 
 Always check the [Official Wiki](https://pavlovwiki.com/index.php/Setting_up_a_dedicated_server) in case you are having issues or if you need more config information.
+
+Ah, and edit the `mods.txt` file to add yourself as admin of the servers.
