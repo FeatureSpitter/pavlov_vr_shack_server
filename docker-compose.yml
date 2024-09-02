@@ -39,7 +39,7 @@ services:
     ports:
       - "7778:7778" # Have no effect since network mode is host, but it is still good to keep this
       - "8178:8178" # Have no effect since network mode is host, but it is still good to keep this
-      - "9101:9101" # Have no effect since network mode is host, but it is still good to keep this
+      - "9102:9102" # Have no effect since network mode is host, but it is still good to keep this
     volumes:
       - ./mods_halo:/home/steam/pavlovserver/Pavlov/Saved/Mods
       - ./halo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
