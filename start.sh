@@ -8,6 +8,6 @@ mkdir -p mods_dust2cs16
 mkdir -p mods_dust2csgo
 mkdir -p mods_halo
 
-chmod -R 755 *
+chmod -R 777 *
 
 docker compose down --remove-orphans && docker compose build && docker compose up -d && docker compose logs -f -t
