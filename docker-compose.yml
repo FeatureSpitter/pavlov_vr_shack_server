@@ -31,7 +31,7 @@ services:
       - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt:ro
     restart: unless-stopped
   
-  halo:
+  office:
     build: .
     environment:
       PV_PORT: 7779
@@ -41,8 +41,8 @@ services:
       - "8179:8179" # Have no effect since network mode is host, but it is still good to keep this
       - "9102:9102" # Have no effect since network mode is host, but it is still good to keep this
     volumes:
-      - ./mods_halo:/home/steam/pavlovserver/Pavlov/Saved/Mods
-      - ./halo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+      - ./mods_office:/home/steam/pavlovserver/Pavlov/Saved/Mods
+      - ./office.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
       - ./RconSettings_3.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt
       - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt:ro
     restart: unless-stopped
