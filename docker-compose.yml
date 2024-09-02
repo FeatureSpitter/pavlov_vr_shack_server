@@ -1,5 +1,5 @@
 services:  
-  dust216:
+  dust2cs16:
     build: .
     environment:
       PV_PORT: 7777
@@ -9,8 +9,8 @@ services:
       - "8177:8177" # Have no effect since network mode is host, but it is still good to keep this
       - "9100:9100" # Have no effect since network mode is host, but it is still good to keep this
     volumes:
-      - ./mods_dust216:/home/steam/pavlovserver/Pavlov/Saved/Mods
-      - ./dust216.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+      - ./mods_dust2cs16:/home/steam/pavlovserver/Pavlov/Saved/Mods
+      - ./dust2cs16.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
       - ./RconSettings_1.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt
       - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt
     restart: unless-stopped
@@ -31,3 +31,18 @@ services:
       - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt
     restart: unless-stopped
   
+  halo:
+    build: .
+    environment:
+      PV_PORT: 7779
+    network_mode: host
+    ports:
+      - "7778:7778" # Have no effect since network mode is host, but it is still good to keep this
+      - "8178:8178" # Have no effect since network mode is host, but it is still good to keep this
+      - "9101:9101" # Have no effect since network mode is host, but it is still good to keep this
+    volumes:
+      - ./mods_halo:/home/steam/pavlovserver/Pavlov/Saved/Mods
+      - ./halo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+      - ./RconSettings_3.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt
+      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt
+    restart: unless-stopped
