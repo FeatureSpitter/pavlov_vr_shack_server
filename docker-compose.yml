@@ -12,7 +12,7 @@ services:
       - ./mods_dust2cs16:/home/steam/pavlovserver/Pavlov/Saved/Mods
       - ./dust2cs16.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
       - ./RconSettings_1.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt
-      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt
+      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt:ro
     restart: unless-stopped
   
   dust2csgo:
@@ -28,7 +28,7 @@ services:
       - ./mods_dust2csgo:/home/steam/pavlovserver/Pavlov/Saved/Mods
       - ./dust2csgo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
       - ./RconSettings_2.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt
-      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt
+      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt:ro
     restart: unless-stopped
   
   halo:
@@ -44,5 +44,5 @@ services:
       - ./mods_halo:/home/steam/pavlovserver/Pavlov/Saved/Mods
       - ./halo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
       - ./RconSettings_3.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt
-      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt
+      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt:ro
     restart: unless-stopped
