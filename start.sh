@@ -6,7 +6,7 @@ sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
 mkdir -p mods_dust2cs16
 mkdir -p mods_dust2csgo
-mkdir -p mods_halo
+mkdir -p mods_office
 
 chmod -R 777 *
 
