@@ -10,9 +10,9 @@ services:
       - "9100:9100" # Have no effect since network mode is host, but it is still good to keep this
     volumes:
       - ./mods_dust216:/home/steam/pavlovserver/Pavlov/Saved/Mods
-      - ./dust216.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini:ro
-      - ./RconSettings_1.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt:ro
-      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt:ro
+      - ./dust216.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+      - ./RconSettings_1.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt
+      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt
     restart: unless-stopped
   
   dust2csgo:
@@ -26,8 +26,8 @@ services:
       - "9101:9101" # Have no effect since network mode is host, but it is still good to keep this
     volumes:
       - ./mods_dust2csgo:/home/steam/pavlovserver/Pavlov/Saved/Mods
-      - ./dust2csgo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini:ro
-      - ./RconSettings_2.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt:ro
-      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt:ro
+      - ./dust2csgo.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+      - ./RconSettings_2.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt
+      - ./mods.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/mods.txt
     restart: unless-stopped
   
